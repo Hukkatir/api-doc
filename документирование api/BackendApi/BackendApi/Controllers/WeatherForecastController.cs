@@ -22,7 +22,7 @@ namespace BackendApi.Controllers
         private static List<string> Summaries = new()
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+        };
 
         public static List<WeatherData> weatherDatas = new()
         {

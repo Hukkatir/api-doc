@@ -27,7 +27,7 @@ namespace BackendApi.Models
         public virtual DbSet<User> Users { get; set; } = null!;
         public virtual DbSet<Video> Videos { get; set; } = null!;
 
-      
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
