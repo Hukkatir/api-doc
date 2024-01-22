@@ -62,7 +62,6 @@ namespace BackendApi.Controllers
         /// <remarks>
         /// Пример запроса:
         ///
-        ///     POST /Todo
         ///     {
         ///         "roleId": 1,
         ///         "username": "Hukkatir",
