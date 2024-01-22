@@ -19,7 +19,7 @@ namespace BackendApi.Controllers
         }
 
         /// <summary>
-        /// Получение всех записей типов блока 
+        /// Получение всех записей
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -47,9 +47,20 @@ namespace BackendApi.Controllers
         /// <summary>
         /// Создание новой записи типа блока
         /// </summary>
+        /// <remarks>
+        /// Пример запроса:
+        /// 
+        ///     {
+        ///         "blockId": 4,
+        ///         "textTypeId": 4,
+        ///         "videoId": 3,
+        ///         "imageId": 4
+        ///     }
+        /// 
+        /// </remarks>
         /// <param name="blockTypes"></param>
         /// <returns></returns>
-        [HttpPost]
+    [HttpPost]
         public IActionResult Add(CreateBlockTypeRequest request) //добавление записей 
         {
             var blockTyprDto = request.Adapt<BlockType>();
@@ -59,7 +70,7 @@ namespace BackendApi.Controllers
         }
 
         /// <summary>
-        /// Обновление записи 
+        /// Обновление дынных записи 
         /// </summary>
         /// <param name="blockTypes"></param>
         /// <returns></returns>

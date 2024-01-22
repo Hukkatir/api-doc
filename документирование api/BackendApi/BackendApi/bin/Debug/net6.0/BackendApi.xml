@@ -56,7 +56,7 @@
         </member>
         <member name="M:BackendApi.Controllers.BlockTypeController.GetAll">
             <summary>
-            Получение всех записей типов блока 
+            Получение всех записей
             </summary>
             <returns></returns>
         </member>
@@ -71,12 +71,23 @@
             <summary>
             Создание новой записи типа блока
             </summary>
+            <remarks>
+            Пример запроса:
+            
+                {
+                    "blockId": 4,
+                    "textTypeId": 4,
+                    "videoId": 3,
+                    "imageId": 4
+                }
+            
+            </remarks>
             <param name="blockTypes"></param>
             <returns></returns>
         </member>
         <member name="M:BackendApi.Controllers.BlockTypeController.Update(BackendApi.Contracts.BlockType.CreateBlockTypeRequest)">
             <summary>
-            Обновление записи 
+            Обновление дынных записи 
             </summary>
             <param name="blockTypes"></param>
             <returns></returns>
@@ -356,7 +367,7 @@
         </member>
         <member name="M:BackendApi.Controllers.TextTypeController.Delete(System.Int32)">
             <summary>
-            Удаление записи типа текста
+            Удаление записи типа текста по id
             </summary>
             <param name="id"></param>
             <returns></returns>

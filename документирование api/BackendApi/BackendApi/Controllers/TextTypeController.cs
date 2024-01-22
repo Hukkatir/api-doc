@@ -88,7 +88,7 @@ namespace BackendApi.Controllers
         }
 
         /// <summary>
-        /// Удаление записи типа текста
+        /// Удаление записи типа текста по id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
