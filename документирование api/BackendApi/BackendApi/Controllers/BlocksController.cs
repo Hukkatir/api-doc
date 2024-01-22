@@ -9,7 +9,7 @@ namespace BackendApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-   
+
     public class BlocksController : ControllerBase
     {
         public dbapiContext Context { get; }
@@ -18,7 +18,7 @@ namespace BackendApi.Controllers
         {
             Context = context;
         }
-        
+
         /// <summary>
         /// Получение всех записей блоков
         /// </summary>
@@ -112,4 +112,4 @@ namespace BackendApi.Controllers
         }
     }
 }
- 
+

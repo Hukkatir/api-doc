@@ -60,7 +60,7 @@ namespace BackendApi.Controllers
         /// </remarks>
         /// <param name="blockTypes"></param>
         /// <returns></returns>
-    [HttpPost]
+        [HttpPost]
         public IActionResult Add(CreateBlockTypeRequest request) //добавление записей 
         {
             var blockTyprDto = request.Adapt<BlockType>();

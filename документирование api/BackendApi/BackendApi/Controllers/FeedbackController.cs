@@ -16,7 +16,7 @@ namespace BackendApi.Controllers
         {
             Context = context;
         }
-        
+
         /// <summary>
         /// Получений всех записей реакций
         /// </summary>

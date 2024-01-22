@@ -13,7 +13,7 @@ namespace BackendApi.Controllers
 
     }
 
-    
+
 
     [ApiController]
     [Route("[controller]")]
@@ -46,7 +46,7 @@ namespace BackendApi.Controllers
             return weatherDatas; //возвращение всех записей слов
         }
 
-    
+
         [HttpPost]
         public IActionResult Add(WeatherData data)
         {
@@ -95,7 +95,7 @@ namespace BackendApi.Controllers
         {
             for (int i = 0; i < weatherDatas.Count; i++)
             {
-                if (weatherDatas[i].Id == id) 
+                if (weatherDatas[i].Id == id)
                 {
                     weatherDatas.RemoveAt(i); //удаляем элемент из массива по его индексу (i)
                     return Ok();
@@ -112,8 +112,8 @@ namespace BackendApi.Controllers
         {
             for (int i = 0; i < weatherDatas.Count; i++)
             {
-                if (weatherDatas[i].Id == id) 
-                { 
+                if (weatherDatas[i].Id == id)
+                {
                     return Ok(weatherDatas[i]);
                 }
             }
@@ -126,7 +126,7 @@ namespace BackendApi.Controllers
         {
             for (int i = 0; i < weatherDatas.Count; i++)
             {
-                if (weatherDatas[i].Location == location) 
+                if (weatherDatas[i].Location == location)
                 {
                     return Ok("Запись с указанным городом имеется в нашем списке");
                 }

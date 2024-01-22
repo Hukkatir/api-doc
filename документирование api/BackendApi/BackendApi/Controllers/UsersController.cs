@@ -22,7 +22,7 @@ namespace BackendApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        
+
         public IActionResult GetAll() //получение всех записей 
         {
             List<User> users = Context.Users.ToList();
