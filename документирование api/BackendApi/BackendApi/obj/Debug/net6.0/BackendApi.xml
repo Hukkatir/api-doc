@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BackendApi</name>
+    </assembly>
+    <members>
+        <member name="M:BackendApi.Controllers.BlocksController.GetAll">
+            <summary>
+            Получение всех записей блоков
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.BlocksController.GetById(System.Int32)">
+            <summary>
+            Получение записи блока по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.BlocksController.Add(BackendApi.Contracts.Blocks.CreateBlockRequest)">
+             <summary>
+             Создание записи блока
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 {
+                     "authorId": 1,
+                     "categoryId": 1,
+                     "blockName": "новость",
+                     "title": "супер заголовок",
+                     "textBlock": "супер текст",
+                     "indexBlock": 1,
+                     "blockTypeId": 1,
+                     "createdBy": 1,
+                     "createdAt": "2024-01-21T15:35:24.093"
+                 }
+            
+             </remarks>
+             <param name="blocks"></param>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.BlocksController.Update(BackendApi.Contracts.Blocks.CreateBlockRequest)">
+            <summary>
+            Обновление данных блока 
+            </summary>
+            <param name="blocks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.BlocksController.Delete(System.Int32)">
+            <summary>
+            Удаление записи блока по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.BlockTypeController.GetAll">
+            <summary>
+            Получение всех записей
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.BlockTypeController.GetById(System.Int32)">
+            <summary>
+            Получение записи по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.BlockTypeController.Add(BackendApi.Contracts.BlockType.CreateBlockTypeRequest)">
+            <summary>
+            Создание новой записи типа блока
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                {
+                    "blockId": 4,
+                    "textTypeId": 4,
+                    "videoId": 3,
+                    "imageId": 4
+                }
+            
+            </remarks>
+            <param name="blockTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.BlockTypeController.Update(BackendApi.Contracts.BlockType.CreateBlockTypeRequest)">
+            <summary>
+            Обновление дынных записи 
+            </summary>
+            <param name="blockTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.BlockTypeController.Delete(System.Int32)">
+            <summary>
+            Удаление записи типа блока по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.CategoryController.GetAll">
+            <summary>
+            Получение всех записей категорий
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.CategoryController.GetById(System.Int32)">
+            <summary>
+            Получение записи категориии по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.CategoryController.Add(BackendApi.Contracts.Category.CreateCategoryRequest)">
+            <summary>
+            Создание новой записи категории
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                {
+                    "categoryName": "Новость",
+                    "descrip": "Новости из мира кино",
+                    "createdBy": 1,
+                    "createdAt": "2024-01-21T18:57:41.342Z"
+                }
+                
+            </remarks>
+            <param name="categories"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.CategoryController.Update(BackendApi.Contracts.Category.CreateCategoryRequest)">
+            <summary>
+            Обновление данных категорий
+            </summary>
+            <param name="categories"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.CategoryController.Delete(System.Int32)">
+            <summary>
+            Удаление записи категории по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.CommentsController.GetAll">
+            <summary>
+            Получение всех записей комментариев
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.CommentsController.GetById(System.Int32)">
+            <summary>
+            Получение комментария по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.CommentsController.Add(BackendApi.Contracts.Comments.CreateCommentsRequest)">
+            <summary>
+            Создание нового комментария
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                { 
+                    "userId": 1,
+                    "blockId": 1,
+                    "textComment": "Крутая новость!",
+                    "createdBy": 1,
+                    "createdAt": "2024-01-22T10:05:04.324Z
+                }
+            
+            </remarks>
+            <param name="comments"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.CommentsController.Update(BackendApi.Contracts.Comments.CreateCommentsRequest)">
+            <summary>
+            Обновление данных комментариев
+            </summary>
+            <param name="comments"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.CommentsController.Delete(System.Int32)">
+            <summary>
+            Удаление комментария по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.FeedbackController.GetAll">
+            <summary>
+            Получений всех записей реакций
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.FeedbackController.GetById(System.Int32)">
+            <summary>
+            Получение записи по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.FeedbackController.Add(BackendApi.Contracts.Feedback.CreateFeedbackRequest)">
+            <summary>
+            Создание записи реакции
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                {
+                    "userId": 1,
+                    "blockId": 1,
+                    "likes": true,
+                    "likesCount": 25
+                }
+                
+            </remarks>
+            <param name="feedbacks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.FeedbackController.Update(BackendApi.Contracts.Feedback.CreateFeedbackRequest)">
+            <summary>
+            Обновление данных 
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.FeedbackController.Delete(System.Int32)">
+            <summary>
+            Удаление данных по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.ImagesController.GetAll">
+            <summary>
+            Получение всех записей фотографий 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.ImagesController.GetById(System.Int32)">
+            <summary>
+            Получение записи фото по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.ImagesController.Add(BackendApi.Contracts.Image.CreateImageRequest)">
+            <summary>
+            Создание новой записи фото 
+            </summary>
+            <remarks>
+            Пример запроса: 
+            
+                {
+                    "blockId": 1,
+                    "imageUrl": "https://www.nme.com/wp-content/uploads/2023/04/Pedro-Pascal@2000x1270.jpg",
+                    "note": "Педро Паскаль на золотом глобусе 2024"
+                }
+                
+            </remarks>
+            <param name="images"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.ImagesController.Update(BackendApi.Contracts.Image.CreateImageRequest)">
+            <summary>
+            Обновление данных записей 
+            </summary>
+            <param name="images"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.ImagesController.Delete(System.Int32)">
+            <summary>
+            Удаление записи по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.RoleController.GetAll">
+            <summary>
+            Получение всех записей ролей
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.RoleController.GetById(System.Int32)">
+            <summary>
+            Получениие записи по id роли
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.RoleController.Add(BackendApi.Contracts.Role.CreateRoleRequest)">
+            <summary>
+            Добавление новой роли 
+            </summary>
+            <remarks>
+            Пример запроса: 
+            
+                {
+                    "roleName": "Администратор",
+                    "descrip": "Следит за контентом на сайте",
+                    "createdBy": 1,
+                    "createdAt": "2024-01-21T20:44:29.278Z"
+                }
+                
+            </remarks>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.RoleController.Update(BackendApi.Contracts.Role.CreateRoleRequest)">
+            <summary>
+            Обновление данных роли 
+            </summary>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.RoleController.Delete(System.Int32)">
+            <summary>
+            Удаление роли по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.TextTypeController.GetAll">
+            <summary>
+            Получение всех записей текста 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.TextTypeController.GetById(System.Int32)">
+            <summary>
+            ПОлучение записи текста по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.TextTypeController.Add(BackendApi.Contracts.TextType.CreateTextTypeRequest)">
+            <summary>
+            Слоздание записи текста 
+            </summary>
+            <remarks>
+            Пример запроса:
+            
+                {   "blockId": 1,
+                    "content": "Этот текст написан курсивом",
+                    "bold": false,
+                    "italic": true,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "green"
+                }
+            
+            </remarks>
+            <param name="textTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.TextTypeController.Update(BackendApi.Contracts.TextType.CreateTextTypeRequest)">
+            <summary>
+            Обновление данных текста
+            </summary>
+            <param name="textTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.TextTypeController.Delete(System.Int32)">
+            <summary>
+            Удаление записи типа текста по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.UsersController.GetAll">
+            <summary>
+            Плучение всех записей пользователей 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.UsersController.GetById(System.Int32)">
+             <summary>
+             Получение записи пользователя по id
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 {
+                     Id": 1
+                 }
+            
+             </remarks>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.UsersController.Add(BackendApi.Contracts.User.CreateUserRequest)">
+             <summary>
+             Создание нового пользователя
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 {
+                     "roleId": 1,
+                     "username": "Hukkatir",
+                     "userPassword": "12345",
+                     "email": "Hukkatir@gmail.com",
+                     "createdBy": 1,
+                     "createdAt": "2024-01-21T18:57:41.342Z"
+                 }
+            
+             </remarks>
+             <param name="model">Пользователь</param>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.UsersController.Update(BackendApi.Contracts.User.CreateUserRequest)">
+             <summary>
+             Обновление данных пользователя
+             </summary>
+             <remarks>
+             Пример запроса:
+             
+                 {
+                     "roleId": 1,
+                     "username": "Hukkatir",
+                     "userPassword": "12345",
+                     "email": "Hukkatir@gmail.com",
+                     "createdBy": 1,
+                     "createdAt": "2024-01-21T18:57:41.342Z"
+                 }
+            
+             </remarks>
+             <param name="user"></param>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.UsersController.Delete(System.Int32)">
+             <summary>
+             Удаление данных пользователя по id
+             </summary>
+             <remarks>
+             Пример запроса:
+            
+                 {
+                     Id": 6
+                 }
+            
+             </remarks>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.VideoController.GetAll">
+            <summary>
+            Получение всех видео записей 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.VideoController.GetById(System.Int32)">
+            <summary>
+            Получени езаписи видео по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.VideoController.Add(BackendApi.Contracts.Video.CreateVideoRequest)">
+            <summary>
+            Создание записи видео 
+            </summary>
+            <remarks>
+            Пример запроса: 
+            
+                {
+                    "blockId": 1,
+                    "videoUrl": "https://youtu.be/cxr3b_Gzmls?si=9HN4fiOKZ0IVqRi_",
+                     "note": "Почему «Оппенгеймер», кажется, главный фильм года"
+                }
+                
+            </remarks>
+            <param name="videos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.VideoController.Update(BackendApi.Contracts.Video.CreateVideoRequest)">
+            <summary>
+            Обновление данных 
+            </summary>
+            <param name="videos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackendApi.Controllers.VideoController.Delete(System.Int32)">
+            <summary>
+            Удаление записи видео по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
